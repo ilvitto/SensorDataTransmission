@@ -104,13 +104,6 @@ void loop() {
     buff[11] = GyZ;
     buff[10] = GyZ >> 8;
     
-    /*size_t len = Serial.available();
-    uint8_t sbuf[len];
-    Serial.readBytes(sbuf, len);
-    
-    for(int i =0; i < len; i++)
-      Serial.println(sbuf[i]);
-      */
     if (serverClient && serverClient.connected()){
       serverClient.write(buff, len);
       delay(1);
